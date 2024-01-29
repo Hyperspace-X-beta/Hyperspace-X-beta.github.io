@@ -11,6 +11,14 @@ z-index: 1;
 left-margin:91%;  
 
 }
+.refresh-button{
+opacity:0.75;
+border-radius:75%;
+background-color:black;
+z-index: 1;
+left-margin:91%;  
+
+}
 </style>
 
   <head>
@@ -39,6 +47,19 @@ left-margin:91%;
     </script>
      <body> 
       <a href="https://hyperspace-x-beta.github.io/games.html"><img src="https://hyperspace-x-beta.github.io/images/home.png" style=width:6.5%;height:6.5%;  class=button id=button ></a>
+      <button class="refresh-button">
+        <img src="https://hyperspace-x-beta.github.io/images/Reload.png" style=width:6.5%;height:6.5%;  class="refresh-button" id=button ></img> 
+      </button>
+       <script>
+    
+        const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+      </script>  
 </body>  
   </body>
 </html>

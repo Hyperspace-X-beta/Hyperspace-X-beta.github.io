@@ -2,7 +2,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Hyperspace-X-beta.github.iostyles.css">
+   <style>
+       body {
+    font-family: orbitron;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+   </style>    
     <title>Loader Example</title>
 </head>
 <body>
@@ -10,6 +37,22 @@
         <div class="loader"></div>
     </div>
     <!-- Your other content goes here -->
-    <script src="Hyperspace-X-beta.github.ioscript.js"></script>
+    <script>
+    // Example: Show loader
+document.addEventListener('DOMContentLoaded', function() {
+    showLoader();
+});
+
+function showLoader() {
+    var loaderContainer = document.querySelector('.loader-container');
+    loaderContainer.style.display = 'block';
+}
+
+// Example: Hide loader
+function hideLoader() {
+    var loaderContainer = document.querySelector('.loader-container');
+    loaderContainer.style.display = 'none';
+}    
+    </script>
 </body>
 </html>

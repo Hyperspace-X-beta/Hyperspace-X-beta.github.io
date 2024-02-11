@@ -1,6 +1,8 @@
 
 
 <!DOCTYPE html>
+
+<div class="glow">
 <div class="bg-img">  
 <html>
 <head>
@@ -12,14 +14,29 @@ body {
   font-family: 'Orbitron', sans-serif;
   font-size: 22px;
 }
+.glow { 
+  color: #fff;
+  animation: glow 3s ease-in-out infinite alternate;
+  
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #Ff0000, 0 0 20px #Ff0000, 0 0 30px #e60073, 0 0 40px #Ff0000, 0 0 50px #Ff0000, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 0px #Ff0000, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #Ff0000;
+  }
+}
 
 .topnav {
   overflow: hidden;
   background-color: #333;
+  
 }
 .bg-img {
   /* The image used */
-  background-image: url("images/galexy.jpg");
+  background-image: url("https://c.tenor.com/VdZJbPtJrfYAAAAC/tenor.gif");
 
   min-height: 100%;
 min-width: 100%;
@@ -33,47 +50,53 @@ min-width: 100%;
 .topnav a {
   float: left;
   color: #f455;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  color:white;
+  text-align: center;
 }
 
 .topnav a:hover {
   background-color: #333;
-  color: white;
+  color:red;
+   -webkit-animation: scale-up-center 0.1s both;
+	  animation: scale-up-center 0.1s both;
 }
 
 .topnav a.active {
   background-color: #046D;
-  color: white;
+  color:red;
 }
 </style>
 </head<body>
 
 <div class="topnav">
+<center>
   <a href="index.html">Hyperspace</a>
+
   <a class="active" href="games.html">games</a>
+  
   <a href="chat">Chat</a>
+
   <a href="about.html">About</a>
+
 </div>
+<center>
+<h1>Hyperspace X</h1>
+</center>
 </body>
 </html>
 <!DOCTYPE html>
 <html>
 <head>
 <title></title>
-<link rel="shortcut icon" href="mountainNoFade.png">
-<script src='everypage.js'></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
 body {
-background-image: url(mountain.png);
-background-position: center center;
-background-repeat:no-repeat;
-background-attachment: fixed;
-background-size: cover; 
+
 }
 
 body::-webkit-scrollbar {
@@ -138,6 +161,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	  border-radius: 30px;
 	  -webkit-animation: scale-down-center 0.1s both;
 	  animation: scale-down-center 0.1s both;
+       color:white;
 	}
   
 	.game-tile:hover {
@@ -145,6 +169,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	  animation: scale-up-center 0.1s both;
       font-weight: bold;
       cursor: pointer;
+      color:red;
 	}
     
 	.game-tile:hover .game-title{
@@ -276,6 +301,9 @@ background-color:#383838;
 color: #eee;
 background-color:#383838;  
 border: 3px solid #292929;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
   }
   .close{
 background-color:#323232;
@@ -311,7 +339,7 @@ function startSearch() {
   }
 }
   </script>
-  
+ 
     <div id="search">
     
   <div>
@@ -331,9 +359,9 @@ function startSearch() {
    </div>  
 
 
-<
+
     <div>
-<label for="searchQuery">Hyperspace</label>
+
     <input type="search" placeholder="search games"id="searchQuery" onload="startSearch()" onkeyup="startSearch()" title="Search" >
   </div>
 
@@ -530,4 +558,5 @@ hehehe();
 </script>
 </body>
 </html>
+</div>
 </div>

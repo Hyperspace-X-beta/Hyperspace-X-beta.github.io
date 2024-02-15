@@ -1,7 +1,7 @@
 {
 "companyName": "Destruction Crew",
 "productName": "Rocket Soccer",
-"dataUrl": "https://hyperspace-x-beta.github.io/Rsdata/RSD 1.1.0rc4.wasm.framework.unityweb",
+"dataUrl": "https://hyperspace-x-beta.github.io/Rsdata/RSD 1.1.0rc4.data.unityweb",
 "wasmCodeUrl": "https://hyperspace-x-beta.github.io/Rsdata/RSD 1.1.0rc4.wasm.code.unityweb",
 "wasmFrameworkUrl": "https://hyperspace-x-beta.github.io/Rsdata/RSD 1.1.0rc4.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,

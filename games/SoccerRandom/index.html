@@ -1,4 +1,47 @@
 <!DOCTYPE html>
+<style>
+.gohom{
+opacity:0.75;
+border-radius:75%;
+background-color:black;
+z-index: 1;
+position:absolute;
+left:95%;
+width:5%;
+height:9%;
+
+}
+.gohom:hover{
+opacity:0.5;  
+}  
+.refresh-button{
+ display:flex;
+ transition:transform 1s;
+position:absolute;
+left:95%;
+top:10%;
+opacity:0.75;  
+} 
+.refresh-button:hover{
+  transform: rotate(359deg);
+  display:flex;
+  opacity:0.5;
+</style>
+<body> 
+      <a href="https://hyperspace-x-beta.github.io/games.html"><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=gohom id=gohom ></a>
+       <img  width="5%" height="9%"  style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ="refresh-button">
+     
+       <script>
+    
+        const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+      </script>  
+</body> 
 <html>
 <head>
 <meta charset="UTF-8">

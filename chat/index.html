@@ -1,4 +1,9 @@
+
+
 <!DOCTYPE html>
+
+<div class="glow">
+<div class="bg-img">  
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
@@ -6,38 +11,109 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Orbitron';font-size: 22px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 250%;
+background-color:black;	
+}
+.glow { 
+  color: #fff;
+  animation: glow 3s ease-in-out infinite alternate;
+  
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #Ff0000, 0 0 20px #Ff0000, 0 0 30px #e60073, 0 0 40px #Ff0000, 0 0 50px #Ff0000, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 0px #Ff0000, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #Ff0000;
+  }
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;}
+  background-color:black;
+    border-radius:30px;
+}
+.bg-img {
+  /* The image used */
+  background-image: url("images/hyperspacehome.gif");
+
+  min-height: 100%;
+min-width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: absolute;
+}
 
 .topnav a {
   float: left;
-  color: #f455;
-  text-align: center;
-  padding: 14px 16px;
+  color: #f4;
+  padding: 1% 8%;
   text-decoration: none;
   font-size: 17px;
+  color:white;
+  text-align: center;
+  border-radius:20px;
+
 }
 
 .topnav a:hover {
   background-color: #333;
-  color: white;
+ color:red;
+
+   -webkit-animation: scale-up-center 0.1s both;
+	  animation: scale-up-center 0.1s both;     
 }
 
-.topnav a.active {
-  background-color: #046D;
-  color: white;
+.midle{
+padding:5% 10%;
+
 }
+.topnav a.active {
+  background-color:grey;
+
+  color:red;
+}
+.button{
+opacity:0.75;
+border-radius:75%;
+background-color:black;
+z-index: 1;
+position:relative;
+
+width:25%;
+height:25%;
+
+}
+.button:hover{
+opacity:0.5;  
+}  
 </style>
-</head>
-<body>
+</head<body>
 
 <div class="topnav">
-  <a href="https://hyperspace-x-beta.github.io/">Home</a>
-  <a href="https://hyperspace-x-beta.github.io/games.html">games</a>
-   <a class="active" href="chat">live chat</a>
-  <a href="https://hyperspace-x-beta.github.io/about.html">About</a>
+<center>
+  <a href="index.html">Hyperspace</a>
+
+  <a href="games.html">Games</a>
+  
+  <a class="active" href="chat">Chat</a>
+
+  <a href="about.html">About</a>
+</center>
 </div>
+<center>
+<h1 class="midle">Hyperspace X</h1>
+
+<div>
+
+<a href="https://hyperspace-x-beta.github.io/chat/hypervideo"><img src="images/HyperVideo-icon.png" target="_blank" class=button id=button ></a>
+
+<div>
+
+</div>
+</div>
+</center>

@@ -1,15 +1,21 @@
 
+ 
+<div>
+<iframe src="https://www.hoodamath.com/mobile/games/duck-life-6-space/game.html?nocheckorient=1" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0;  z-index:-1;">
+</iframe>
+</div>
 <style>
 .button{
 opacity:0.75;
 border-radius:75%;
 background-color:black;
 z-index: 1;
-position:absolute;
-left:92%;
+float:right;
 width:8%;
-top:0px;
+
+padding:none; 
 }
+
 
 .button:hover{
 opacity:0.5; 
@@ -19,12 +25,10 @@ opacity:0.5;
 .refresh-button{
  display:flex;
  transition:transform 1s;
-position:absolute;
-left:92%;
-top:75px;
+float:right;
 opacity:0.75;  
 width:8%;
-
+padding:none 
 } 
 .refresh-button:hover{
   transform: rotate(359deg);
@@ -32,15 +36,30 @@ width:8%;
   opacity:0.5;
   background-color:white;
   }
+  
+.bc{
+display:grid;
+padding:none; 
+gap:5%;
+}
+.bcpos{
+padding:none; 
+}
+
 </style>
 <body>
-<div class="buttoncontainer" id="buttoncontainer">
+
+
+<div>
+
+<container class="bcpos" id="bcpos">
+<div class="bc" id="bc">
       <a href="https://hyperspace-x-beta.github.io/games.html"><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
-       <img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ="refresh-button">
+       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
      
        <script>
-    
-        const refreshButton = document.querySelector('.refresh-button');
+       
+     const refreshButton = document.querySelector('.refresh-button');
 
 const refreshPage = () => {
   location.reload();
@@ -49,9 +68,5 @@ const refreshPage = () => {
 refreshButton.addEventListener('click', refreshPage)
       </script>  
 </div>      
-
-
-<div>
-<iframe src="https://www.hoodamath.com/mobile/games/duck-life-6-space/game.html?nocheckorient=1" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;">
-</iframe>
-</div>
+</container>
+</div> 

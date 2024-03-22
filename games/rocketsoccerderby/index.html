@@ -1,15 +1,18 @@
 
+<div>
+<iframe src="https://hyperspace-filez.github.io/RocketSoccerDerby/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0;  z-index:-1;">
+</iframe>
+</div>
 <style>
 .button{
 opacity:0.75;
 border-radius:75%;
 background-color:black;
 z-index: 1;
-position:absolute;
-left:92%;
+float:right;
 width:8%;
-top:0px;
- 
+
+padding:none; 
 }
 
 
@@ -21,12 +24,10 @@ opacity:0.5;
 .refresh-button{
  display:flex;
  transition:transform 1s;
-position:absolute;
-left:92%;
-top:15%;
+float:right;
 opacity:0.75;  
 width:8%;
-
+padding:none 
 } 
 .refresh-button:hover{
   transform: rotate(359deg);
@@ -34,95 +35,30 @@ width:8%;
   opacity:0.5;
   background-color:white;
   }
-  .switch {
-  position:absolute;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  bottom: 0;
-  right:0;
+  
+.bc{
+display:grid;
+padding:none; 
+gap:5%;
 }
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
- 
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.bcpos{
+padding:none; 
 }
 
 </style>
 <body>
 
-<label class="switch">
-  <input type="checkbox" onclick="myFunction()" id="check" checked>
-  <span class="slider round"></span>
-</label>
 
+<div>
 
-<div class="fadeOut" id="fadeOut">
+<container class="bcpos" id="bcpos">
+<div class="bc" id="bc">
       <a href="https://hyperspace-x-beta.github.io/games.html"><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
-       <img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ="refresh-button">
+       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
      
        <script>
        
-    function myFunction() {
-  var x = document.getElementById("fadeOut");
-  if (x.style.display === "none") {
-
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-        const refreshButton = document.querySelector('.refresh-button');
+     const refreshButton = document.querySelector('.refresh-button');
 
 const refreshPage = () => {
   location.reload();
@@ -131,9 +67,5 @@ const refreshPage = () => {
 refreshButton.addEventListener('click', refreshPage)
       </script>  
 </div>      
-
-
-<div>
-<iframe src="https://hyperspace-filez.github.io/RocketSoccerDerby/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;">
-</iframe>
+</container>
 </div>

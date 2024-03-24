@@ -41,8 +41,9 @@ opacity:0.75;
 border-radius:75%;
 background-color:black;
 z-index: 1;
-float:right;
-width:8%;
+
+display:flex; 
+width:10vh;
 
 padding:none; 
 }
@@ -50,15 +51,14 @@ padding:none;
 
 .button:hover{
 opacity:0.5; 
-  display:flex;
+  
   background-color:white;
 }  
 .refresh-button{
  display:flex;
  transition:transform 1s;
-float:right;
 opacity:0.75;  
-width:8%;
+width:10vh;
 padding:none 
 } 
 .refresh-button:hover{
@@ -69,16 +69,14 @@ padding:none
   }
   
 .bc{
-display:grid;
-padding:none; 
-gap:3%;
-}
-.bcpos{
-padding:none; 
+display: flex;
+    flex-direction: column;
+
 position:absolute;
-right:1%;
 top:1%;
+right:1%;
 }
+
 
 </style>
 <body>
@@ -86,10 +84,11 @@ top:1%;
 
 <div>
 
-<container class="bcpos" id="bcpos">
+<div class="bcpos" id="bcpos">
 <div class="bc" id="bc">
-      <a href="https://hyperspace-x-beta.github.io/games.html"><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
+      <a href="https://hyperspace-x-beta.github.io/games.html" ><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
        <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
+       
     
        <script>
        
@@ -102,5 +101,5 @@ const refreshPage = () => {
 refreshButton.addEventListener('click', refreshPage)
       </script>  
 </div>      
-</container>
+</div>
 </div> 

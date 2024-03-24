@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html>
-  
+
 <style>
 .button{
 opacity:0.75;
@@ -11,11 +10,10 @@ z-index: 1;
 
 display:flex; 
 width:10vh;
-z-index:1;
+
 padding:none; 
+
 }
-
-
 .button:hover{
 opacity:0.5; 
   
@@ -34,43 +32,22 @@ padding:none
   opacity:0.5;
   background-color:white;
   }
-  
-.bc{
+  .bc{
 display: flex;
     flex-direction: column;
-z-index:1;
+
 position:absolute;
 top:1%;
 right:1%;
 }
 </style>
-<div>
 
-<div class="bcpos" id="bcpos">
-<div class="bc" id="bc">
-      <a href="https://hyperspace-x-beta.github.io/games.html" ><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
-       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
-       
-    
-       <script>
-       
-     const refreshButton = document.querySelector('.refresh-button');
-
-const refreshPage = () => {
-  location.reload();
-}
-
-refreshButton.addEventListener('click', refreshPage)
-      </script>  
-</div>      
-</div>
-</div> 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bloons Tower Defence 4 </title>
+    <title>Bloons </title>
   </head>
-  <body style="margin: 0; padding: 0 z-index:-1;">
-    
+  <body style="margin: 0; padding: 0">
+
     <div
       id="container"
       style="position: absolute; width: auto; height: auto; inset: 0"
@@ -86,8 +63,29 @@ refreshButton.addEventListener('click', refreshPage)
         player.style.height = "100%";
         container.appendChild(player);
         player.load("Bloons.swf");
-        
+
       });
-    
+    </script>
+     <body> 
+    <div>
+
+<div class="bcpos" id="bcpos">
+<div class="bc" id="bc">
+     <a href="https://hyperspace-x-beta.github.io/games.html" ><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
+       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
+</div>
+</div>
+</div>
+       <script>
+
+        const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+      </script>  
+</body>  
   </body>
 </html>

@@ -1,19 +1,10 @@
 
-<!DOCTYPE html> 
-<html> 
-  
-<head> 
-    <meta charset="UTF-8"> 
-    <title>Prevent Framing Example</title> 
-    <meta http-equiv="X-Frame-Options" 
-          content="DENY"> 
-</head> 
-  
-<body> 
-    <h1 style="color:green"> 
-         testing
-      </h1> 
-  
-</body> 
-  
-</html>
+<p>bang<p>
+<style>html{display:none;}</style>
+<script>
+   if (self == top) {
+       document.documentElement.style.display = 'block'; 
+   } else {
+       top.location = self.location; 
+   }
+</script>

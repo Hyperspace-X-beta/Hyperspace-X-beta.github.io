@@ -2,6 +2,7 @@ function getRandomGreeting() {
   var greetings = [
   "Where are we dropin boys",
   "OHIO",
+  "tortia slap boxing",  
   "What is up",
   "You are lucky if you see this",
   "GOATED",

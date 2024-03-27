@@ -1,5 +1,49 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+.button{
+opacity:0.75;
+border-radius:75%;
+background-color:black;
+z-index: 1;
+
+display:flex; 
+width:10vh;
+
+padding:none; 
+
+}
+.button:hover{
+opacity:0.5; 
+  
+  background-color:white;
+}  
+.refresh-button{
+ display:flex;
+ transition:transform 1s;
+opacity:0.75;  
+width:10vh;
+padding:none 
+} 
+.refresh-button:hover{
+  transform: rotate(359deg);
+  display:flex;
+  opacity:0.5;
+  background-color:white;
+  }
+  .bc{
+display: flex;
+    flex-direction: column;
+
+position:absolute;
+top:1%;
+right:1%;
+}
+</style>
+
+  <!DOCTYPE html>
+<html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cat Ninja</title>
@@ -22,5 +66,26 @@
         player.load("catninja.swf");
       });
     </script>
+  </body>
+    <div>
+
+<div class="bcpos" id="bcpos">
+<div class="bc" id="bc">
+     <a href="https://hyperspace-x-beta.github.io/games.html" ><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
+       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
+</div>
+</div>
+</div>
+       <script>
+
+        const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+      </script>  
+</body>  
   </body>
 </html>

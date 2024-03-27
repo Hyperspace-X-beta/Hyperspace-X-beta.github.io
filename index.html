@@ -1,121 +1,91 @@
-
-
 <!DOCTYPE html>
-
-<div class="glow">
-<div class="bg-img">  
 <html>
-<head>
-<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 250%;
-background-color:black;	
-}
-.glow { 
-  color: #fff;
-  animation: glow 3s ease-in-out infinite alternate;
-  
-}
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #Ff0000, 0 0 20px #Ff0000, 0 0 30px #e60073, 0 0 40px #Ff0000, 0 0 50px #Ff0000, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 0px #Ff0000, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #ff4da6, 0 0 0px #Ff0000;
-  }
-}
-
-.topnav {
-  overflow: hidden;
-  background-color:black;
-    border-radius:30px;
-}
-.bg-img {
-  /* The image used */
-  background-image: url("images/hyperspacehome.gif");
-
-  min-height: 100%;
-min-width: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  position: absolute;
-}
-
-.topnav a {
-  float: left;
-  color: #f4;
-  padding: 1% 8%;
-  text-decoration: none;
-  font-size: 17px;
-  color:white;
-  text-align: center;
-  border-radius:20px;
-
-}
-
-.topnav a:hover {
-  background-color: #333;
- color:red;
-
-   -webkit-animation: scale-up-center 0.1s both;
-	  animation: scale-up-center 0.1s both;     
-}
-
-.midle{
-padding:5% 10%;
-
-}
-.topnav a.active {
-  background-color:grey;
-
-  color:red;
-}
 .button{
 opacity:0.75;
 border-radius:75%;
 background-color:black;
 z-index: 1;
-position:relative;
 
-width:25%;
-height:25%;
+display:flex; 
+width:10vh;
+
+padding:none; 
 
 }
 .button:hover{
-opacity:0.5;  
-}  
-</style>
-</head<body>
-
-<div class="topnav">
-<center>
-  <a class="active" href="index.html">Hyperspace</a>
-
-  <a href="games.html">games</a>
+opacity:0.5; 
   
-  <a href="chat">Chat</a>
+  background-color:white;
+}  
+.refresh-button{
+ display:flex;
+ transition:transform 1s;
+opacity:0.75;  
+width:10vh;
+padding:none 
+} 
+.refresh-button:hover{
+  transform: rotate(359deg);
+  display:flex;
+  opacity:0.5;
+  background-color:white;
+  }
+  .bc{
+display: flex;
+    flex-direction: column;
 
-  <a href="about.html">About</a>
-</center>
+position:absolute;
+top:1%;
+right:1%;
+}
+</style>
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cat Ninja</title>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div
+      id="container"
+      style="position: absolute; width: auto; height: auto; inset: 0"
+    ></div>
+    <script src="../ruffle/ruffle.js"></script>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        player.style.width = "100%";
+        player.style.height = "100%";
+        container.appendChild(player);
+        player.load("catninja.swf");
+      });
+    </script>
+  </body>
+    <div>
+
+<div class="bcpos" id="bcpos">
+<div class="bc" id="bc">
+     <a href="https://hyperspace-x-beta.github.io/games.html" ><img src="https://hyperspace-x-beta.github.io/images/home.png"  class=button id=button ></a>
+       <a><img    style=" border-radius:75%; z-index: 1; background-color:black; Padding:none; border:none; cursor:pointer;  "  id="refresh-button" class="refresh-button" src="https://hyperspace-x-beta.github.io/images/Reload.png" ></a>
 </div>
-<center>
-<h1 class="midle">Hyperspace X</h1>
-<span id="subtitle" style="font-size: 0.75em;">Reload message broke</span>
-<script src="https://hyperspace-x-beta.github.io/js/subtitle.js" ></script>  
-<div>
-
-<a href="games.html"><img src="images/gamebtn.png"  class=button id=button ></a>
-<a href="https://hyperspace-x-beta.github.io/chat"><img src="images/chatbtn.png" style="" class=button id=button ></a>
-
-<div>
-
 </div>
 </div>
-</center>
+       <script>
+
+        const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+      </script>  
+</body>  
+  </body>
+</html>

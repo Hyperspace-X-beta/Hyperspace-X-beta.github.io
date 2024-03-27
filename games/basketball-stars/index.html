@@ -1,5 +1,6 @@
 
  
+ 
 <div>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,13 +87,12 @@
 </html>
 </div> 
 <style>
-
 .button{
 opacity:0.75;
 border-radius:75%;
 background-color:black;
 z-index: 1;
-position:absolute;
+
 display:flex; 
 width:10vh;
 
@@ -109,12 +109,8 @@ opacity:0.5;
  display:flex;
  transition:transform 1s;
 opacity:0.75;  
-
 width:10vh;
-padding:none; 
-
-position:relative;
-top:12vh;
+padding:none 
 } 
 .refresh-button:hover{
   transform: rotate(359deg);
@@ -124,7 +120,9 @@ top:12vh;
   }
   
 .bc{
-display:grid;
+display: flex;
+    flex-direction: column;
+
 position:absolute;
 top:1%;
 right:1%;
